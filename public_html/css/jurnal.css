@@ -1,0 +1,147 @@
+    body {
+      font-family: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", 
+        "Raleway",  "Poppins",  sans-serif; 
+      background: #F2F3F7;
+      color: #1e293b;
+    }
+    .filter-bar {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    /* Custom card style */
+    .card-grid {
+      margin-top: 0rem;
+      padding-top: 0rem;
+      padding-bottom: 0rem;
+    }
+    .card {
+      background: white;
+      border-radius: 1rem; /* rounded bigger */
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+                  0 4px 6px -4px rgb(0 0 0 / 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15),
+                  0 10px 10px -5px rgb(0 0 0 / 0.04);
+    }
+    .card img {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem 1.25rem 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-title {
+      font-weight: 700;
+      font-size: 1.125rem;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+      color: #0f172a;
+    }
+    .card-meta {
+      font-size: 0.875rem;
+      color: #64748b;
+      margin-bottom: 0.75rem;
+    }
+    .card-abstract {
+      font-size: 0.95rem;
+      color: #475569;
+      flex-grow: 1;
+      line-height: 1.4;
+    }
+    /* Header style */
+    header {
+      background-color: #1e293b;
+      color: #f8fafc;
+      font-size: 0.875rem;
+    }
+    .top-bar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.25rem 1rem;
+      text-align: right;
+      font-weight: 500;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+    h1.page-title {
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1.2rem;
+        align-items: center;
+        color: #00254F;
+    }
+    h2.page-subtitle {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.04rem;
+      color: #00254F;
+      margin-bottom: 1rem;
+    }
+
+    /* Section title */
+    .section-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        color: #00254F;
+        position: relative;
+        width: 100%;
+    }
+    .section-title::after {
+        content: "";
+        display: block;
+        width: 38px;
+        height: 3px;
+        background-color: #9e1a2b;
+        margin: 6px auto 0;
+        border-radius: 2px;
+    }
+    /* Grid container for cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+      gap: 1.75rem 1.75rem;
+    }
+    button.load-more {
+      display: block;
+      margin: 3rem auto 0;
+      background-color: #00254F;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 8px 25px;
+      border-radius: 9999px;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.25s ease;
+      user-select: none;
+    }
+    button.load-more:hover {
+      background-color: #001730;
+    }
+
+    body {
+        padding-top: 100px;
+    }

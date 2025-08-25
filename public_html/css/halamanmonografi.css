@@ -1,0 +1,669 @@
+/* Reset & base */
+
+    *, *::before, *::after {
+
+      box-sizing: border-box;
+
+    }
+
+    body {
+
+      margin: 0;
+
+      font-family: 'Inter', sans-serif;
+
+      background: #F2F3F7;
+
+      color: #1b1b35;
+
+      line-height: 1.5;
+
+      -webkit-font-smoothing: antialiased;
+
+      -moz-osx-font-smoothing: grayscale;
+
+      min-height: 100vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+    a {
+
+      text-decoration: none;
+
+      color: inherit;
+
+    }
+
+    button {
+
+      cursor: pointer;
+
+      font-family: inherit;
+
+    }
+
+
+
+    /* Container max widths based on breakpoints */
+
+    .container {
+
+      width: 90%;
+
+      max-width: 1280px;
+
+      margin: 0 auto;
+
+    }
+
+
+
+    .logo {
+
+      font-weight: 700;
+
+      font-size: 1.3rem;
+
+      color: #00213b;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 6px;
+
+    }
+
+
+
+    /* FILTERS AREA */
+
+    .filters-container {
+      max-width: 1280px;
+      width: 90%;
+      display: flex;
+      gap: 16px;
+      margin: 16px auto 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      position: relative;
+      z-index: 10;
+      overflow: visible;
+    }
+
+    .filters-container .dropdown-menu-fitur {
+
+      z-index: 9999;
+
+    }
+
+
+
+    /* Dropdown base */
+
+    .dropdown-fitur {
+
+      position: relative;
+
+      flex: 1 1 200px;
+
+      max-width: 280px;
+
+      background: white;
+
+      border: 1px solid #ccc;
+
+      border-radius: 8px;
+
+      cursor: pointer;
+
+      user-select: none;
+
+    }
+
+    .dropdown-fitur.disabled {
+
+      opacity: 0.6;
+
+      pointer-events: none;
+
+    }
+
+
+
+    .dropdown-toggle-fitur {
+
+      padding: 12px 16px;
+
+      font-size: 1rem;
+
+      color: #2c2c37;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+    }
+
+    .dropdown-toggle-fitur span.placeholder-fitur {
+
+      color: #8a8a99;
+
+    }
+
+
+
+    .dropdown-menu-fitur {
+
+      position: absolute;
+
+      padding: 0;
+
+      top: 100%;
+
+      left: 0;
+
+      right: 0;
+
+      background: white;
+
+      border: 1px solid #ccc;
+
+      border-radius: 8px;
+
+      margin-top: 6px;
+
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+
+      max-height: 280px;
+
+      overflow-y: auto;
+
+      z-index: 9999; /* Ubah dari 1500 ke 9999 */
+
+    }
+
+
+
+    .dropdown-item-fitur {
+
+      padding: 10px 16px;
+
+      margin: 0;
+
+      font-size: 0.95rem;
+
+      color: #212134;
+
+      white-space: nowrap;
+
+      transition: background-color 0.2s ease;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+    }
+
+    .dropdown-item-fitur:hover,
+
+    .dropdown-item-fitur:focus {
+
+      background-color: #e0e7ff;
+
+      outline: none;
+
+    }
+
+    
+
+    /* Checkbox style for tahun filter */
+
+    .dropdown-item-fitur input[type="checkbox"] {
+
+      cursor: pointer;
+
+      accent-color: #00213b;
+
+      flex-shrink: 0;
+
+    }
+
+    .dropdown-item-fitur label {
+
+      cursor: pointer;
+
+      flex-grow: 1;
+
+      user-select: none;
+
+    }
+
+
+
+    /* Icon for dropdown arrow */
+
+    .material-icons.dropdown-arrow-fitur {
+
+      font-size: 20px;
+
+      color: #8a8a99;
+
+      user-select: none;
+
+      transition: transform 0.3s ease;
+
+    }
+
+    .dropdown-fitur.open > .dropdown-toggle-fitur > .dropdown-arrow-fitur {
+
+      transform: rotate(180deg);
+
+    }
+
+
+
+    /* Clear filter button with filter icon */
+
+    .btn-filter-clear {
+
+      flex-shrink: 0;
+
+      background: #00213b;
+
+      border-radius: 8px;
+
+      padding: 12px 16px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: white;
+
+      border: none;
+
+      transition: background-color 0.3s ease;
+
+      height: 48px;
+
+      width: 48px;
+
+    }
+
+    .btn-filter-clear:hover,
+
+    .btn-filter-clear:focus {
+
+      background: #003463;
+
+      outline: none;
+
+    }
+
+
+
+    /* MAIN content */
+
+    main {
+
+      flex-grow: 1;
+
+      padding-bottom: 40px;
+
+    }
+
+    h1.page-title {
+
+      max-width: 1280px;
+
+      margin: 0 auto 32px;
+
+      padding: 0 5vw;
+
+      font-weight: 700;
+
+      font-size: 1.75rem;
+
+      color: #00254F;
+
+      letter-spacing: 0.02em;
+
+    }
+
+    .section-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #00254F;
+      position: relative;
+      width: 100%;
+    }
+    
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 38px;
+      height: 3px;
+      background-color: #9e1a2b;
+      margin: 6px auto 0;
+      border-radius: 2px;
+    }
+
+
+
+    /* Card list */
+
+    .monografi-list {
+
+      max-width: 1280px;
+
+      margin: 0 auto;
+
+      padding: 0 5vw;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 28px;
+
+      position: relative;
+
+      z-index: 1;
+      
+      overflow: visible;
+
+    }
+
+    .monografi-card {
+
+      background: white;
+
+      display: flex;
+
+      gap: 24px;
+
+      border-radius: 16px;
+
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.08);
+
+      padding: 24px;
+
+      align-items: flex-start;
+
+      flex-wrap: wrap;
+
+    }
+
+    .monografi-image-wrapper {
+
+      flex-shrink: 0;
+
+      width: 180px;
+
+      border-radius: 16px;
+
+      box-shadow:
+
+        0 0 0 4px #00213b,
+
+        18px 18px 0 0 #701616;
+
+      overflow: hidden;
+
+      position: relative;
+
+      background: #f1f5f8;
+
+    }
+
+    .monografi-image-wrapper img {
+
+      display: block;
+
+      width: 100%;
+
+      aspect-ratio: 3 / 4;
+
+      object-fit: cover;
+
+      border-radius: 16px;
+
+    }
+
+    .monografi-content {
+
+      flex: 1 1 400px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 12px;
+
+      min-width: 0;
+
+    }
+
+    .monografi-content strong {
+
+      font-weight: 700;
+
+      color: #14213d;
+
+    }
+
+    .monografi-text {
+
+      font-size: 0.95rem;
+
+      color: #2c2c37;
+
+      max-width: 700px;
+
+    }
+
+
+
+    /* Data fields */
+
+    .monografi-data {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px 24px;
+
+      margin-bottom: 10px;
+
+      font-size: 0.95rem;
+
+      color: #14213d;
+
+    }
+
+    .monografi-data > div {
+
+      white-space: nowrap;
+
+    }
+
+
+
+    /* Executive summary label */
+
+    .label-summary {
+
+      font-weight: 600;
+
+      font-size: 1rem;
+
+      margin-bottom: 6px;
+
+      color: #00213b;
+
+    }
+
+
+
+    /* Button download */
+
+    .btn-download {
+
+      align-self: start;
+
+      background-color: #00213b;
+
+      color: white;
+
+      font-weight: 600;
+
+      padding: 10px 20px;
+
+      border-radius: 8px;
+
+      border: none;
+
+      transition: background-color 0.3s ease;
+
+      margin-top: auto;
+
+      min-width: 120px;
+
+    }
+
+    .btn-download:hover,
+
+    .btn-download:focus {
+
+      background-color: #003463;
+
+      outline: none;
+
+    }
+
+
+
+
+
+    /* Responsive grid for links */
+
+    @media (min-width: 768px) {
+
+      .dropdown-menu-fitur {
+
+        max-height: 320px;
+
+      }
+
+      .monografi-card {
+
+        flex-wrap: nowrap;
+
+      }
+
+    }
+
+
+
+    /* MOBILE - tablet & mobile layouts */
+
+
+
+    @media (max-width: 767px) {
+
+      nav.desktop-nav {
+
+        display: none;
+
+      }
+
+      .filters-container {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+
+      }
+
+      .dropdown-fitur {
+
+        max-width: 100%;
+
+        flex: none;
+
+      }
+
+      .monografi-card {
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        gap: 20px;
+
+      }
+
+      .monografi-image-wrapper {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        box-shadow:
+
+          0 0 0 4px #00213b,
+
+          18px 18px 0 0 #701616;
+
+      }
+
+      .monografi-content {
+
+        min-width: auto;
+
+      }
+
+      .btn-download {
+
+        width: 100%;
+
+        min-width: auto;
+
+        margin-top: 12px;
+
+      }
+
+      h1.page-title {
+
+        font-size: 1.5rem;
+
+      }
+
+
+
+    }
+
+    body {
+
+        padding-top: 120px;
+
+    }    

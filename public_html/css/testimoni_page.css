@@ -1,0 +1,91 @@
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        dark: '#1E1E1E',
+                        light: '#F5F5F5',
+                    }
+                }
+            }
+        }
+
+body{
+    padding: 80px;
+}
+
+/* ========================
+   Responsive Adjustments
+=========================== */
+
+/* Laptop and below */
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 60px;
+  }
+
+  .text-3xl {
+    font-size: 1.875rem; /* 30px */
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 940px) {
+  body {
+    padding: 40px;
+  }
+
+  .h-96 {
+    height: 20rem !important; /* Ensure iframe doesn't overflow on short tablets */
+  }
+
+  .text-xl {
+    font-size: 1rem;
+  }
+
+  .text-lg {
+    font-size: 0.95rem;
+  }
+
+  .p-6 {
+    padding: 1rem !important;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 570px) {
+  body {
+    padding: 20px;
+  }
+
+  h2.text-3xl {
+    font-size: 1.5rem !important;
+    text-align: center;
+  }
+
+  .text-xl {
+    font-size: 0.875rem !important;
+  }
+
+  .text-sm {
+    font-size: 0.75rem !important;
+  }
+
+  .w-16.h-16 {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  .grid-cols-1 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .p-6 {
+    padding: 0.75rem !important;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
